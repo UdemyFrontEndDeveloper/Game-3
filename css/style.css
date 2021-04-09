@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+.game {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 90vh;
+  width: 90vw;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(yellow), to(green));
+  background-image: linear-gradient(to bottom, yellow, green);
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px 0 black;
+          box-shadow: 0 0 10px 0 black;
+  overflow-x: hidden;
+}
+
+.game .road {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-image: url(../road.png);
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: 0 0;
+}
+
+.game .road .startLine {
+  position: absolute;
+  top: 0;
+  left: 100px;
+  width: 1%;
+  height: 100%;
+  background-color: white;
+}
+
+.game .road .endLine {
+  position: absolute;
+  top: 0;
+  right: 100px;
+  width: 1%;
+  height: 100%;
+  background-color: white;
+}
+
+.game .road .car1 {
+  left: 0;
+  top: 10%;
+}
+
+.game .road .car2 {
+  left: 0;
+  top: 55%;
+}
+
+.game .road .car1.active,
+.game .road .car2.active {
+  outline: 3px solid red;
+}
+
+.game .road .car1,
+.game .road .car2 {
+  cursor: pointer;
+  position: absolute;
+  width: 100px;
+}
+
+.game .road .car1 img,
+.game .road .car2 img {
+  display: block;
+  width: 100%;
+}
+
+.game .statistics .currentBet,
+.game .statistics .statistics2 {
+  position: absolute;
+}
+
+.game .statistics {
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  height: 40%;
+  width: 80%;
+  background-color: yellow;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-box-shadow: 0 0 15px 0 black;
+          box-shadow: 0 0 15px 0 black;
+}
+
+.game .statistics .currentBet {
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border: 3px solid black;
+  width: 200px;
+  text-align: center;
+  padding: 10px 0;
+  -webkit-box-shadow: 3px 3px 0 0 green;
+          box-shadow: 3px 3px 0 0 green;
+}
+
+.game .statistics .statistics2 * {
+  padding: 10px 0;
+  width: 170px;
+  text-align: center;
+  border: 3px solid black;
+  -webkit-box-shadow: 3px 3px 0 0 green;
+          box-shadow: 3px 3px 0 0 green;
+}
+
+.game .statistics .statistics2 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.game .statistics .statistics2 .bet input {
+  padding: 0;
+  margin-left: 10px;
+  width: 50px;
+  text-align: center;
+  border: 1px solid black;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: transparent;
+}
+
+.game .statistics .statistics2 .submit {
+  padding: 8px;
+}
+
+.game .statistics .statistics2 .submit button {
+  padding: 0;
+  width: 50px;
+  text-align: center;
+  border: 3px solid black;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: transparent;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.game .statistics .statistics2 .submit button:hover {
+  border-radius: 10px;
+  width: 70px;
+  color: red;
+  background-color: black;
+}
+/*# sourceMappingURL=style.css.map */
