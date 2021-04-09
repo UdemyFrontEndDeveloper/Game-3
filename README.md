@@ -1,4 +1,3 @@
 # Game-3
 
-
-Let's play a drag race game :D
+Game mainly in javaScript
